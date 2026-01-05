@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Note;
 
 class NoteController extends Controller
 {
     public function index() {
-        //Logic for fetching all notes
+        $notes = Note::latest()->get();
+        return view('notes.index', compact('notes'));
     }
 
     public function show(Note $note) {
