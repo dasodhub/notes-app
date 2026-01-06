@@ -10,15 +10,15 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
 
-                    <form action="{{ route('notes.store') }}" method="POST">
+                    <form action="/notes" method="POST">
                         @csrf
                         <div class="mb-4">
                             <label for="title" class="block text-sm font-medium text-gray-700">{{ __('Title') }}</label>
                             <input type="text" name="title" id="title" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" required>
                         </div>
                         <div class="mb-4">
-                            <label for="body" class="block text-sm font-medium text-gray-700">{{ __('Body') }}</label>
-                            <textarea name="body" id="body" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" required></textarea>
+                            <label for="content" class="block text-sm font-medium text-gray-700">{{ __('Content') }}</label>
+                            <textarea name="content" id="content" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" required></textarea>
                         </div>
                         <div class="">
                             <button type="submit">{{ __('Create Note') }}</button>

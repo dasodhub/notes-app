@@ -23,7 +23,7 @@ class NoteController extends Controller
     public function store(Request $request) {
         $validated  = $request->validate([
             'title' => 'required|min:3',
-            'content' => 'required|min:3',
+            'content' => 'required|min:10',
         ]);
 
         $request->user()->notes()->create($validated);
