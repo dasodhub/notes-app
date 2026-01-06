@@ -17,6 +17,7 @@
                 @else
                     <div class="p-6 text-gray-900">
                         {{ __("You don't have any notes yet.") }}
+                        <a href="{{ route('notes.create') }}" class="text-blue-500">{{ __('Create a new note') }}</a>
                     </div>
                 @endif
             </div>
