@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Note;
+use App\Policies\NotePolicy;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,6 +15,10 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
+
+    protected $policies = [
+        Note::class => NotePolicy::class,
+    ];
 
     /**
      * Bootstrap any application services.
