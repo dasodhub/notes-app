@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <h2>Create a note</h2>
+
                     <form action="{{ route('notes.store') }}" method="POST">
                         @csrf
                         <div class="mb-4">
@@ -20,8 +20,8 @@
                             <label for="body" class="block text-sm font-medium text-gray-700">{{ __('Body') }}</label>
                             <textarea name="body" id="body" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2" required></textarea>
                         </div>
-                        <div class="flex justify-end">
-                            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">{{ __('Create Note') }}</button>
+                        <div class="">
+                            <button type="submit">{{ __('Create Note') }}</button>
                         </div>
                     </form>
                 </div>

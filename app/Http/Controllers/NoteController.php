@@ -21,7 +21,14 @@ class NoteController extends Controller
     }
 
     public function store(Request $request) {
-        //Logic for storing a note
+        $validated  = $request->validate([
+            'title' => 'required|min:3',
+            'content' => 'required|min:3',
+        ]);
+
+        $request->user()->notes()->create($validated);
+
+        return redirect()->route('notes.index')->with('success', 'Note created successfully');
     }
 
     public function edit(Note $note) {
